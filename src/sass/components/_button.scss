@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.btn {
+  padding: 1.2rem 3.2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 1rem $color-eerie-black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@mixin button($color-1, $color-2) {
+  @extend .btn;
+  background: $color-1;
+  color: $color-2;
+  &:hover {
+    background: $color-2;
+    color: $color-1;
+  }
+}
+
+.btn-primary {
+  @include button($color-primary, $color-eerie-black);
+}
+
+.btn-primary-inverse {
+  @include button($color-eerie-black, $color-primary);
+}

@@ -1,0 +1,32 @@
+// Font properties
+@mixin font-prop($fn-family, $fn-weight, $fn-size, $line-hg, $txt-trans) {
+  font-family: $fn-family;
+  font-weight: $fn-weight;
+  font-size: $fn-size;
+  line-height: $line-hg;
+  text-transform: $txt-trans;
+}
+
+// Responsive break points
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}

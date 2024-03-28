@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/images/konekt-elektro-logo.png"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/d24d4d56bc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/email-form.js" defer></script>
+    <script src="./js/multilingual.js" defer></script>
+
+    <meta
+      name="description"
+      content="Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur."
+    />
+    <meta name="keywords" content="konekt elektro, struja, " />
+    <title>Konekt Elektro</title>
+  </head>
+  <body class="container">
+    <nav class="navigation">
+      <div class="navigation__logo">
+        <img
+          class="navigation__logo--img"
+          src="./assets/images/konekt-elektro-logo.png"
+          alt="logo"
+        />
+      </div>
+
+      <div class="navigation__languages heading__cta">
+        <a
+          href="#"
+          class="navigation__languages--link"
+          data-lng="rs"
+          onclick="changeLanguage('rs')"
+          >SRB</a
+        >
+        <a
+          href="#"
+          class="navigation__languages--link"
+          data-lng="en"
+          onclick="changeLanguage('en')"
+          >ENG</a
+        >
+        <a
+          href="#"
+          class="navigation__languages--link"
+          data-lng="de"
+          onclick="changeLanguage('de')"
+          >DEU</a
+        >
+      </div>
+    </nav>
+
+    <header class="header">
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="./assets/images/background-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="header__content">
+        <h1 data-i18n="welcome_message" class="header__title heading__1"></h1>
+      </div>
+    </header>
+
+    <section class="employees">
+      <div class="employees__team">
+        <h3
+          data-i18n="employees_team"
+          class="heading__3 text-color-primary"
+        ></h3>
+        <div class="employees__list">
+          <img
+            src="./assets/images/employee-profile-1.jpg"
+            alt="employee 1"
+            class="employees__img"
+          />
+          <div class="employees__details">
+            <h4 class="text-color-primary heading__4">Nenad Bugarin</h4>
+            <p class="text-color-white heading__small">CEO & Co-Founder</p>
+          </div>
+
+          <img
+            src="./assets/images/employee-profile-2.jpg"
+            alt="employee 2"
+            class="employees__img"
+          />
+          <div class="employee__details">
+            <h4 class="text-color-primary heading__4">Darko Papuga</h4>
+            <p class="text-color-white heading__small">
+              Dr. Mr. Dip. Ing. & Co-Founder
+            </p>
+          </div>
+
+          <img
+            src="./assets/images/employee-profile-3.jpg"
+            alt="employee 3"
+            class="employees__img"
+          />
+          <div class="employee__details">
+            <h4 class="text-color-primary heading__4">Dusan Bugarin</h4>
+            <p class="text-color-white heading__small">Co-Founder</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="employees__description">
+        <h2 data-i18n="about_employees" class="heading__2 mb--md"></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quo,
+          possimus id voluptatum nisi dolorem ea aliquam incidunt quidem nihil!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iure
+          accusantium illo nesciunt ipsum vero optio autem odit maxime
+          provident? Optio enim eos deserunt voluptas corrupti libero fugiat.
+          Saepe, ut?
+        </p>
+      </div>
+    </section>
+
+    <section class="about mv--hg">
+      <h2 data-i18n="heading_about" class="about__title heading__2 mb"></h2>
+      <div class="about__items">
+        <div class="about__item">
+          <div class="about__picture about__picture--1">&nbsp;</div>
+          <h4 class="about__heading heading__4">
+            <span data-i18n="about_one" class="about__heading--span"></span>
+          </h4>
+          <div class="about__details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              explicabo optio inventore porro ullam, praesentium velit vel eius
+              voluptatum! Dignissimos ad molestiae voluptas veritatis, nobis
+              doloribus ea magnam a accusantium!
+            </p>
+          </div>
+        </div>
+
+        <div class="about__item">
+          <div class="about__picture about__picture--2">&nbsp;</div>
+          <h4 class="about__heading heading__4">
+            <span data-i18n="about_two" class="about__heading--span"></span>
+          </h4>
+          <div class="about__details">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
+              eveniet sed aperiam. Nisi voluptate magnam necessitatibus maiores
+              repudiandae facilis inventore impedit excepturi, magni obcaecati
+              error explicabo pariatur aliquam? Totam, eos.
+            </p>
+          </div>
+        </div>
+
+        <div class="about__item">
+          <div class="about__picture about__picture--3">&nbsp;</div>
+          <h4 class="about__heading heading__4">
+            <span data-i18n="about_three" class="about__heading--span"></span>
+          </h4>
+          <div class="about__details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              doloremque tempore optio? Voluptatem, excepturi rerum porro
+              consequatur esse quidem laborum dolorem, accusamus dicta
+              repellendus voluptates dolor perspiciatis commodi. Quasi, tenetur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="story__pictures">
+      <img
+        src="./assets/images/konekt-elektro-19.jpg"
+        alt="Story picture 1"
+        class="story__img--1"
+      />
+      <img
+        src="./assets/images/konekt-elektro-18.jpg"
+        alt="Story picture 2"
+        class="story__img--2"
+      />
+    </div>
+
+    <div class="story__content">
+      <h3 data-i18n="story_title" class="heading__3"></h3>
+      <h2 class="heading__2 mv--md">
+        &ldquo;<span data-i18n="story_quote"></span>&rdquo;
+      </h2>
+      <p class="story__text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio,
+        neque. Fugiat nulla dicta obcaecati pariatur quos! Magni ducimus
+        recusandae ipsum.
+      </p>
+    </div>
+
+    <section class="gallery">
+      <figure class="gallery__item gallery__item--1">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-1.jpg"
+          alt="Konekt Elektro Gallery image 1"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--2">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-2.jpg"
+          alt="Konekt Elektro Gallery image 2"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--3">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-3.jpg"
+          alt="Konekt Elektro Gallery image 3"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--4">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-4.jpg"
+          alt="Konekt Elektro Gallery image 4"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--5">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-5.jpg"
+          alt="Konekt Elektro Gallery image 5"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--6">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-6.jpg"
+          alt="Konekt Elektro Gallery image 6"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--7">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-7.jpg"
+          alt="Konekt Elektro Gallery image 7"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--8">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-8.jpg"
+          alt="Konekt Elektro Gallery  image 8"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--9">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-9.jpg"
+          alt="Konekt Elektro Gallery  image 9"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--10">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-10.jpg"
+          alt="Konekt Elektro Gallery  image 10"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--11">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-11.jpg"
+          alt="Konekt Elektro Gallery  image 11"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--12">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-12.jpg"
+          alt="Konekt Elektro Gallery  image 12"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--13">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-13.jpg"
+          alt="Konekt Elektro Gallery image 13"
+        />
+      </figure>
+
+      <figure class="gallery__item gallery__item--14">
+        <img
+          class="gallery__img"
+          src="./assets/images/konekt-elektro-14.jpg"
+          alt="Konekt Elektro Gallery image 14"
+        />
+      </figure>
+    </section>
+
+    <section class="contact">
+      <div class="form mv--hg">
+        <h2
+          data-i18n="contact_title"
+          class="form__title heading__2 text-color-primary mb--md"
+        ></h2>
+
+        <form class="contact__form" action="#">
+          <div class="input-box">
+            <div class="input-field field">
+              <input
+                type="text"
+                placeholder="Full Name"
+                id="name"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt">Full Name can't be blank</div>
+            </div>
+            <div class="input-field field">
+              <input
+                type="text"
+                placeholder="Email Address"
+                id="email"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt email">Email Address can't be blank</div>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="input-field field">
+              <input
+                type="text"
+                placeholder="Phone Number"
+                id="phone"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt">Phone Number can't be blank</div>
+            </div>
+            <div class="input-field field">
+              <input
+                type="text"
+                placeholder="Subject"
+                id="subject"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt">Subject can't be blank</div>
+            </div>
+          </div>
+
+          <div class="textarea-field field">
+            <textarea
+              name=""
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+              class="item"
+              autocomplete="off"
+            ></textarea>
+            <div class="error-txt">Message can't be blank</div>
+          </div>
+
+          <button type="submit" class="btn-primary-inverse heading__cta mt--sm">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="contact__map" id="map">
+        <iframe
+          title="map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11165.246040872526!2d19.5291516!3d45.6043836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b57a3b55f9a9d%3A0xb9c6e2fd2dd416c7!2sKONEKT%20ELEKTRO!5e0!3m2!1ssr!2srs!4v1709575603197!5m2!1ssr!2srs"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__main mt--lg">
+        <div class="footer__logo">
+          <h1>LOGO</h1>
+          <p>
+            Konekt Elektro Kula - Resenje za vase probleme! <br />
+            Izvodjenje elektro radova i postavljanje elektricnih instalacija.
+          </p>
+        </div>
+
+        <div class="footer__contact">
+          <address>
+            <h4 class="heading__4">Jožefa Atile 15, Kula, Srbija</h4>
+            <p>
+              <a
+                class="footer__contact--email mv--sm"
+                href="mailto:konektelektro21@gmail.com?subject=This is an email"
+                target="_blank"
+                >konektelektro21@gmail.com</a
+              >
+            </p>
+            <p>+381 64 25-12-743</p>
+          </address>
+
+          <div class="socials">
+            <div class="socials__item">
+              <a
+                class="socials__link"
+                href="https://www.facebook.com/konekt.elektro21/"
+                target="_blank"
+                ><i class="socials__icon fab fa-facebook"></i
+              ></a>
+            </div>
+            <div class="socials__item">
+              <a
+                class="socials__link"
+                href="https://www.instagram.com/konekt_elektro_kula/"
+                target="_blank"
+                ><i class="socials__icon fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__copyright heading__small mb mt--lg">
+        &copy; Copyright 2021 by Konekt Elektro Kula. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- <script src="./js/email-form.js"></script>
+    <script src="./js/multilingual.js"></script> -->
+  </body>
+</html>

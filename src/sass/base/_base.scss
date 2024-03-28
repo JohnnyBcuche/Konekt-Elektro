@@ -1,0 +1,107 @@
+@use "../abstracts" as *;
+
+:root {
+  --grid-columns: [full-start] minmax(6rem, 1fr) [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
+    minmax(6rem, 1fr) [full-end];
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px -> 1rem = 10px
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 50%;
+  }
+}
+
+body {
+  background-color: $color-white-smoke;
+  color: $color-eerie-black;
+  font-family: $font-poppins;
+  color: $color-eerie-black;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: min-content 80dvh repeat(2, min-content) 40dvw repeat(
+      3,
+      min-content
+    );
+  grid-template-columns: var(--grid-columns);
+
+  @include respond(tab-port) {
+    grid-template-rows: min-content 100dvh;
+  }
+  @include respond(phone) {
+    grid-template-columns:
+      [full-start] 2.4rem [center-start]
+      repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end]
+      2.4rem [full-end];
+  }
+}
+
+// Layout spaceing
+.mt {
+  margin-top: 5rem;
+  &--sm {
+    margin-top: 1.5rem;
+  }
+  &--md {
+    margin-top: 3rem;
+  }
+  &--lg {
+    margin-top: 7rem;
+  }
+  &--hg {
+    margin-top: 10rem;
+  }
+}
+
+.mb {
+  margin-bottom: 5rem;
+  &--sm {
+    margin-bottom: 1.5rem;
+  }
+  &--md {
+    margin-bottom: 3rem;
+  }
+  &--lg {
+    margin-bottom: 7rem;
+  }
+  &--hg {
+    margin-bottom: 10rem;
+  }
+}
+
+.mv {
+  margin: 5rem 0;
+  &--sm {
+    margin: 1.5rem 0;
+  }
+  &--md {
+    margin: 3rem 0;
+  }
+  &--lg {
+    margin: 7rem 0;
+  }
+  &--hg {
+    margin: 10rem 0;
+  }
+}

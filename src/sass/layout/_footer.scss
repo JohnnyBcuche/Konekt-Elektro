@@ -1,0 +1,88 @@
+@use "../abstracts" as *;
+
+.footer {
+  background-color: $color-eerie-black;
+  color: $color-primary;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+
+  &__main {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    justify-self: end;
+
+    @include respond(phone) {
+      justify-self: center;
+      text-align: center;
+    }
+
+    &--email {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-white;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+      &:hover,
+      &:active {
+        text-decoration: none;
+        color: $color-primary;
+        transform: rotate(5deg) scale(1.3);
+      }
+    }
+  }
+
+  &__copyright {
+    grid-column: center-start / center-end;
+    color: $color-white;
+    text-align: center;
+  }
+}
+
+.socials {
+  font-size: 5rem;
+  padding-top: 2rem;
+  display: flex;
+
+  @include respond(phone) {
+    justify-content: center;
+  }
+
+  &__item {
+    padding-right: 2rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-primary;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: $color-white;
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+  &__icon {
+    &:hover,
+    &:active {
+      box-shadow: 0 0 3rem rgba($color: $color-white, $alpha: 0.2),
+        0 0 2rem rgba($color: $color-white, $alpha: 0.1) inset;
+    }
+  }
+}

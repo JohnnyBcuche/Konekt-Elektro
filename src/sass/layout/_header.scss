@@ -1,0 +1,48 @@
+@use "../abstracts" as *;
+
+.header {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+    rgba($color-white, 0.3),
+    rgba($color-white-smoke, 0.3)
+  );
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+
+  &__content {
+    text-align: center;
+    max-width: 70%;
+    @include respond(phone) {
+      max-width: 95%;
+    }
+  }
+
+  &__title {
+    font-family: "Poppins", sans-serif;
+    color: $color-eerie-black;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    transition: all 0.3s ease;
+    &:hover {
+      -webkit-text-stroke: 2px $color-eerie-black;
+      color: transparent;
+    }
+  }
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

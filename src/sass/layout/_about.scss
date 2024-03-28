@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+
+.about {
+  background-color: inherit;
+  grid-column: center-start / center-end;
+
+  &__title {
+    text-align: center;
+    color: $color-eerie-black;
+  }
+
+  &__items {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: $color-white;
+    color: $color-eerie-black;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.3);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: url(../../assets/images/konekt-elektro-1.jpg);
+    }
+
+    &--2 {
+      background-image: url(../../assets/images/konekt-elektro-3.jpg);
+    }
+
+    &--3 {
+      background-image: url(../../assets/images/konekt-elektro-8.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-eerie-black;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading--span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.85),
+      rgba($color-primary-light, 0.85)
+    );
+  }
+
+  &__details {
+    padding: 1.5rem;
+  }
+}

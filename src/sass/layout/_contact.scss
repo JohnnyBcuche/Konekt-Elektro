@@ -1,0 +1,83 @@
+@use "../abstracts" as *;
+
+.contact {
+  background-color: inherit;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+
+  &__form {
+    width: auto;
+    text-align: center;
+  }
+
+  &__map {
+    @include respond(tab-port) {
+      min-height: 50dvh;
+    }
+  }
+}
+
+.form {
+  @include respond(tab-port) {
+    margin-bottom: auto;
+  }
+}
+
+form .input-box {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.input-box .input-field {
+  width: 48.5%;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.field .item {
+  width: 100%;
+  padding: 1.8rem;
+  background: transparent;
+  border: 2px solid $color-eerie-black;
+  outline: none;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  color: $color-eerie-black;
+  margin: 1.2rem 0;
+}
+.field.error .item {
+  border-color: $color-error-red;
+}
+.field .item::placeholder {
+  color: $color-gray-light;
+}
+
+.field .error-txt {
+  font-size: 1.4rem;
+  color: $color-error-red;
+  text-align: left;
+  margin: -0.5rem 0 1rem;
+  display: none;
+}
+.field.error .error-txt {
+  display: block;
+}
+
+form .textarea-field .item {
+  resize: none;
+}
+form .textarea-field .error-txt {
+  margin-top: -1rem;
+}

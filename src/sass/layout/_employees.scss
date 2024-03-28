@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+.employees {
+  min-height: 40dvw;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+
+  &__description {
+    grid-column: col-start 4 / full-end;
+    background-color: inherit;
+    padding: 6rem 8dvw;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__team {
+    grid-column: full-start / col-end 3;
+    background-color: $color-eerie-black;
+    box-shadow: 0 0 4rem rgba($color: $color-gray-light, $alpha: 0.3);
+    padding: 3rem;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+      min-height: 60dvh;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    line-height: 1;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 8rem;
+    border-radius: 50%;
+    display: block;
+  }
+}
